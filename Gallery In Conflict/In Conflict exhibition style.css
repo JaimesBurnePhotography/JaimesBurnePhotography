@@ -75,11 +75,12 @@ header h1 {
 
 /* Gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .image-container {
