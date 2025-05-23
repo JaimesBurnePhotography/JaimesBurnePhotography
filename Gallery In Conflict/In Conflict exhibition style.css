@@ -77,9 +77,9 @@ header h1 {
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 45px;
   width: 100%;
-  max-width: 350px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
