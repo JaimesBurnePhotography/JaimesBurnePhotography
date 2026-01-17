@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaimes M. Burne - Home</title>
+  <title>Jaimes M. Burne - Anaglyph Collections</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="New folder/styles.css">
   <link href="New folder/Untitled-2.css" rel="stylesheet" type="text/css">
@@ -12,12 +12,11 @@
 <body>
   <header>
     <h1>Jaimes M. Burne</h1>
+	<p class="subtitle">Anaglyph Collections</p>
 	<p class="subtitle">Photography</p>
 <p class="subtitle subtitle-link">
-  <a href="artist cv.html">CV</a>
 </p>
 <p class="subtitle subtitle-link">
-  <a href="contact info.html">Contact Me</a>
 </p>
 	  <header> 
   <nav class="dropdown">
@@ -30,6 +29,8 @@
 	  <a href="Gallery.Live.Event.Photography.html">Live Event Photography Portfolio</a>
       <a href="Various.Collected.Portfolios.html">Various Collected Portfolios</a>
       <a href="Other.Collected.Projects.html">Other Projects</a>
+      <a href="contact.info.html">Contact Me</a>
+	  <a href="Artist.CV.html">About Me</a>
     </div>
 	<section class="subtitle-links">
 </section>
@@ -39,36 +40,25 @@
   </header>
 
   <section class="="gallery">
-							
+
+		<main class="gallery">
+	  <div class="image-container">
+    <img src="Gallery Anaglyphs 3/Cain & Abel.jpg" alt="Artwork 1" />
+    <div class="overlay">
+      <a href="Anaglyphs.Exhibition.Three.html" class="title">Anaglyph Collection 3</a>
+    </div>
+  </div>	
 	<main class="gallery">
 	  <div class="image-container">
     <img src="Arabesque website jpeg.jpg" alt="Artwork 1" />
     <div class="overlay">
-      <a href="Anaglyphs Collections.html" class="title">Anaglyph Collections</a>
+      <a href="Anaglyphs.Exhibition.Two.html" class="title">Anaglyph Collection 2</a>
     </div>
   </div>					 
   <div class="image-container">
-    <img src="deer 3.jpg" alt="Artwork 2" />
+    <img src="duality.jpg" alt="Artwork 1" />
     <div class="overlay">
-      <a href="Gallery Wild Life.html" class="title">Wildlife</a>
-    </div>
-  </div>
-  <div class="image-container">
-    <img src="Gallery Live Event Photography/Chaidura 7.jpg" alt="Artwork 3" />
-    <div class="overlay">
-      <a href="Gallery Live Event Photography.html" class="title">Live Event Photography</a>
-    </div>
-  </div>
-  <div class="image-container">
-    <img src="Gallery Judgement/4 - religious iconography.jpg" alt="Artwork 3" />
-    <div class="overlay">
-      <a href="Various Collected Projects.html" class="title">Various Projects</a>
-    </div>
-  </div>
-  <div class="image-container">
-    <img src="wedding 1.jpg" alt="Artwork 5" />
-    <div class="overlay">
-      <a href="Various Collected Portfolios.html" class="title">Other Portfolios</a>
+      <a href="Anaglyphs.Exhibition.One.html" class="title">Anaglyph Collection 1</a>
     </div>
   </div>
 </main>
@@ -123,7 +113,8 @@
     const mode = body.classList.contains('dark-mode') ? 'dark' : 'light';
     localStorage.setItem('theme', mode);
   });
-							
+	
+
 
 </script>
 </body>

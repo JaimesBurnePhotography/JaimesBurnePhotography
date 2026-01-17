@@ -75,20 +75,30 @@ header h1 {
   display: block;
 }
 
-/* Gallery */
+/* =======================
+   GALLERY
+======================= */
+
 .gallery {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 60px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 .image-container {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -103,12 +113,10 @@ header h1 {
   transform: scale(1.05);
 }
 
+/* Overlay */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   opacity: 0;
@@ -133,6 +141,72 @@ header h1 {
 .description {
   font-size: 1rem;
   text-align: center;
+}
+
+/* =======================
+   LIGHTBOX (Native Resolution)
+======================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-slide img {
+  max-width: none;              /* native resolution */
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Navigation */
+.lightbox button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+
+.lightbox .close {
+  top: 20px;
+  right: 20px;
+  transform: none;
+  font-size: 2rem;
 }
 
 /* Footer */

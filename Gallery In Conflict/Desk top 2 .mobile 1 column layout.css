@@ -77,12 +77,19 @@ header h1 {
 
 /* Gallery */
 .gallery {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
   gap: 60px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 .image-container {
